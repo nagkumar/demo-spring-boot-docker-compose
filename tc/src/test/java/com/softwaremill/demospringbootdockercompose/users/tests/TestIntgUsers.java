@@ -1,6 +1,6 @@
 package com.softwaremill.demospringbootdockercompose.users.tests;
 
-import com.softwaremill.demospringbootdockercompose.tests.AbstIntegrationTest;
+import com.softwaremill.demospringbootdockercompose.tests.AbstTestIntg;
 import com.softwaremill.demospringbootdockercompose.domain.users.User;
 import com.softwaremill.demospringbootdockercompose.infrastructure.users.api.Users;
 import org.junit.jupiter.api.Test;
@@ -10,7 +10,7 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class UsersIntegrationTest extends AbstIntegrationTest
+public class TestIntgUsers extends AbstTestIntg
 {
     @Test
     void shouldReturnSavedUser()

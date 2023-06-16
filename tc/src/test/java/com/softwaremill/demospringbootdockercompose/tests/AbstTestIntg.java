@@ -13,7 +13,7 @@ import org.springframework.test.context.ActiveProfiles;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Import(TestContainersCFGs.class)
 @ActiveProfiles("test")
-public abstract class AbstIntegrationTest
+public abstract class AbstTestIntg
 {
     @Autowired
     protected TestRestTemplate testRestTemplate;

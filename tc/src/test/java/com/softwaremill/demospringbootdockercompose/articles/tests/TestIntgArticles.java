@@ -5,7 +5,7 @@ import com.softwaremill.demospringbootdockercompose.domain.articles.ArticleId;
 import com.softwaremill.demospringbootdockercompose.domain.articles.Author;
 import com.softwaremill.demospringbootdockercompose.domain.articles.Content;
 import com.softwaremill.demospringbootdockercompose.infrastructure.articles.api.Articles;
-import com.softwaremill.demospringbootdockercompose.tests.AbstIntegrationTest;
+import com.softwaremill.demospringbootdockercompose.tests.AbstTestIntg;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public final class ArticlesIntegrationTest extends AbstIntegrationTest
+public final class TestIntgArticles extends AbstTestIntg
 {
     @Test
     void shouldReturnSavedArticle()
