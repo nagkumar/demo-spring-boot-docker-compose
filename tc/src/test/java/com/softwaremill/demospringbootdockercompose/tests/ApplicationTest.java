@@ -7,11 +7,10 @@ import org.springframework.context.annotation.Import;
 
 @SpringBootTest
 @Import(TestContainersCFGs.class)
-class ApplicationTest
+public final class ApplicationTest
 {
     @Test
     void contextLoads()
     {
-
     }
 }
