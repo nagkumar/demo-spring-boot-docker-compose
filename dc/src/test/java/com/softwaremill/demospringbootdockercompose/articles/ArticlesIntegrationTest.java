@@ -1,6 +1,6 @@
 package com.softwaremill.demospringbootdockercompose.articles;
 
-import com.softwaremill.demospringbootdockercompose.BaseIntegrationTest;
+import com.softwaremill.demospringbootdockercompose.AbstTestIntg;
 import com.softwaremill.demospringbootdockercompose.domain.articles.Article;
 import com.softwaremill.demospringbootdockercompose.domain.articles.ArticleId;
 import com.softwaremill.demospringbootdockercompose.domain.articles.Author;
@@ -13,7 +13,7 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ArticlesIntegrationTest extends BaseIntegrationTest
+public class ArticlesIntegrationTest extends AbstTestIntg
 {
 
     @Test

@@ -10,9 +10,8 @@ import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-public class BaseIntegrationTest
+public abstract class AbstTestIntg
 {
-
     @Autowired
     protected TestRestTemplate testRestTemplate;
 
