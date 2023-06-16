@@ -12,18 +12,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class UsersIntegrationTest extends BaseIntegrationTest
 {
-
     @Test
     void shouldReturnSavedUser()
     {
-	// given
-	var user = new User(UUID.randomUUID().toString(), "username");
-	usersRepository.save(user);
+	User lToBeSavedUser = new User(UUID.randomUUID().toString(), "username");
+	usersRepository.save(lToBeSavedUser);
 
-	// when
-	Users users = testRestTemplate.getForObject("/api/users", Users.class);
-
-	// then
-	assertThat(users).isEqualTo(new Users(List.of(user)));
+	Users lFetchedUsers = testRestTemplate.getForObject("/api/users", Users.class);
+	assertThat(lFetchedUsers).isEqualTo(new Users(List.of(lToBeSavedUser)));
     }
 }

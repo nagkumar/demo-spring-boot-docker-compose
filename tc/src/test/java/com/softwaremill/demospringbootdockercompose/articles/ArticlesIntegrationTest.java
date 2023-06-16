@@ -15,21 +15,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ArticlesIntegrationTest extends BaseIntegrationTest
 {
-
     @Test
     void shouldReturnSavedArticle()
     {
-	// given
-	var
-		article =
-		new Article(new ArticleId(UUID.randomUUID().toString()), new Author("test-author"),
-			    new Content("test content"));
-	articlesRepository.save(article);
+	var lToBeSavedArticles = new Article(new ArticleId(UUID.randomUUID().toString()), new Author("test-author"),
+				  new Content("test content"));
+	articlesRepository.save(lToBeSavedArticles);
 
-	// when
-	Articles articles = testRestTemplate.getForObject("/api/articles", Articles.class);
-
-	// then
-	assertThat(articles).isEqualTo(new Articles(List.of(article)));
+	Articles fetchedArticles = testRestTemplate.getForObject("/api/articles", Articles.class);
+	assertThat(fetchedArticles).isEqualTo(new Articles(List.of(lToBeSavedArticles)));
     }
 }

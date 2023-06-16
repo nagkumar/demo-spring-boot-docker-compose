@@ -2,17 +2,13 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
 	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>3.1.0</version>
-	<relativePath/>
-    </parent>
+
     <groupId>com.softwaremill</groupId>
     <artifactId>demo-spring-boot-docker-compose</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>demo-spring-boot-docker-compose</name>
+
     <modules>
 	<module>core</module>
 	<module>dc</module>
@@ -22,6 +18,13 @@
     <properties>
 	<java.version>19</java.version>
     </properties>
+
+    <parent>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-parent</artifactId>
+	<version>3.1.0</version>
+	<relativePath/>
+    </parent>
 
     <dependencies>
 	<dependency>
@@ -40,16 +43,6 @@
 	</dependency>
     </dependencies>
 
-    <repositories>
-	<repository>
-	    <id>spring-milestones</id>
-	    <name>Spring Milestones</name>
-	    <url>https://repo.spring.io/milestone</url>
-	    <snapshots>
-		<enabled>false</enabled>
-	    </snapshots>
-	</repository>
-    </repositories>
     <pluginRepositories>
 	<pluginRepository>
 	    <id>spring-milestones</id>
