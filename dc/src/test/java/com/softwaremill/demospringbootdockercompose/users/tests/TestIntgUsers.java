@@ -1,4 +1,4 @@
-package com.softwaremill.demospringbootdockercompose.users;
+package com.softwaremill.demospringbootdockercompose.users.tests;
 
 import com.softwaremill.demospringbootdockercompose.AbstTestIntg;
 import com.softwaremill.demospringbootdockercompose.domain.users.User;

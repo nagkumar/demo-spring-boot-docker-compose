@@ -1,4 +1,4 @@
-package com.softwaremill.demospringbootdockercompose.articles;
+package com.softwaremill.demospringbootdockercompose.articles.tests;
 
 import com.softwaremill.demospringbootdockercompose.AbstTestIntg;
 import com.softwaremill.demospringbootdockercompose.domain.articles.Article;
