@@ -18,8 +18,9 @@
 	<module>dc</module>
 	<module>tc</module>
     </modules>
+
     <properties>
-	<java.version>17</java.version>
+	<java.version>19</java.version>
     </properties>
 
     <dependencies>
@@ -59,5 +60,4 @@
 	    </snapshots>
 	</pluginRepository>
     </pluginRepositories>
-
 </project>
