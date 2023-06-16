@@ -13,23 +13,17 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ArticlesIntegrationTest extends AbstTestIntg
+public final class TestIntgArticles extends AbstTestIntg
 {
-
     @Test
     void shouldReturnSavedArticle()
     {
-	// given
-	var
-		article =
-		new Article(new ArticleId(UUID.randomUUID().toString()), new Author("test-author"),
-			    new Content("test content"));
-	articlesRepository.save(article);
+	Article lToBeStoredArticle = new Article(new ArticleId(UUID.randomUUID().toString()),
+				      new Author("test-author"),
+				      new Content("test content"));
+	articlesRepository.save(lToBeStoredArticle);
 
-	// when
-	Articles articles = testRestTemplate.getForObject("/api/articles", Articles.class);
-
-	// then
-	assertThat(articles).isEqualTo(new Articles(List.of(article)));
+	Articles lFetchedArticles = testRestTemplate.getForObject("/api/articles", Articles.class);
+	assertThat(lFetchedArticles).isEqualTo(new Articles(List.of(lToBeStoredArticle)));
     }
 }

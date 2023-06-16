@@ -18,11 +18,12 @@ public final class TestIntgArticles extends AbstTestIntg
     @Test
     void shouldReturnSavedArticle()
     {
-	var lToBeSavedArticles = new Article(new ArticleId(UUID.randomUUID().toString()), new Author("test-author"),
+	Article lToBeStoredArticle = new Article(new ArticleId(UUID.randomUUID().toString()),
+					     new Author("test-author"),
 					     new Content("test content"));
-	articlesRepository.save(lToBeSavedArticles);
+	articlesRepository.save(lToBeStoredArticle);
 
-	Articles fetchedArticles = testRestTemplate.getForObject("/api/articles", Articles.class);
-	assertThat(fetchedArticles).isEqualTo(new Articles(List.of(lToBeSavedArticles)));
+	Articles lFetchedArticles = testRestTemplate.getForObject("/api/articles", Articles.class);
+	assertThat(lFetchedArticles).isEqualTo(new Articles(List.of(lToBeStoredArticle)));
     }
 }

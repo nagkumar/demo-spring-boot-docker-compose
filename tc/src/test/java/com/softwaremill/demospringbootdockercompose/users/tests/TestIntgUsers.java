@@ -10,7 +10,7 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TestIntgUsers extends AbstTestIntg
+public final class TestIntgUsers extends AbstTestIntg
 {
     @Test
     void shouldReturnSavedUser()
