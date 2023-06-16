@@ -1,8 +1,8 @@
 package com.softwaremill.demospringbootdockercompose.tests;
 
-import com.softwaremill.demospringbootdockercompose.tc.cfgs.TestContainersCFGs;
 import com.softwaremill.demospringbootdockercompose.infrastructure.articles.database.ArticlesRepository;
 import com.softwaremill.demospringbootdockercompose.infrastructure.users.database.UsersRepository;
+import com.softwaremill.demospringbootdockercompose.tc.cfgs.TestContainersCFGs;
 import org.junit.jupiter.api.AfterEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,7 +13,7 @@ import org.springframework.test.context.ActiveProfiles;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Import(TestContainersCFGs.class)
 @ActiveProfiles("test")
-public class BaseIntegrationTest
+public abstract class AbstIntegrationTest
 {
     @Autowired
     protected TestRestTemplate testRestTemplate;
