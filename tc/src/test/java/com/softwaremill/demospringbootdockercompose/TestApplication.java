@@ -3,13 +3,12 @@ package com.softwaremill.demospringbootdockercompose;
 import com.softwaremill.demospringbootdockercompose.config.TestContainersConfiguration;
 import org.springframework.boot.SpringApplication;
 
-public class TestApplication
+public final class TestApplication
 {
-
-    public static void main(String[] args)
+    public static void main(final String[] aArgs)
     {
 	SpringApplication.from(Application::main)
 			 .with(TestContainersConfiguration.class)
-			 .run(args);
+			 .run(aArgs);
     }
 }

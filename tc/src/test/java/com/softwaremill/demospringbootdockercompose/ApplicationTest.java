@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Import;
 @Import(TestContainersConfiguration.class)
 class ApplicationTest
 {
-
     @Test
     void contextLoads()
     {
