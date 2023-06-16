@@ -15,7 +15,6 @@ import org.springframework.test.context.ActiveProfiles;
 @ActiveProfiles("test")
 public class BaseIntegrationTest
 {
-
     @Autowired
     protected TestRestTemplate testRestTemplate;
 
