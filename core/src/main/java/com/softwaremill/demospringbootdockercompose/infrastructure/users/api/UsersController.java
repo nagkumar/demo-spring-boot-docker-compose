@@ -7,17 +7,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/users")
-public class UsersController {
+public class UsersController
+{
 
     private final UsersRepository usersRepository;
 
-    public UsersController(UsersRepository usersRepository) {
-        this.usersRepository = usersRepository;
+    public UsersController(UsersRepository usersRepository)
+    {
+	this.usersRepository = usersRepository;
     }
 
     @GetMapping
-    public Users getAllUsers() {
-        var users = usersRepository.findAll();
-        return new Users(users);
+    public Users getAllUsers()
+    {
+	var users = usersRepository.findAll();
+	return new Users(users);
     }
 }

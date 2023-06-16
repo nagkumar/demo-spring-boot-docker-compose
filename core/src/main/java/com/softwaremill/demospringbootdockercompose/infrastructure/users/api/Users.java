@@ -4,5 +4,6 @@ import com.softwaremill.demospringbootdockercompose.domain.users.User;
 
 import java.util.List;
 
-public record Users(List<User> users) {
+public record Users(List<User> users)
+{
 }

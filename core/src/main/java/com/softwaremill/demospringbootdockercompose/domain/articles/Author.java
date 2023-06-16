@@ -1,4 +1,5 @@
 package com.softwaremill.demospringbootdockercompose.domain.articles;
 
-public record Author(String name) {
+public record Author(String name)
+{
 }

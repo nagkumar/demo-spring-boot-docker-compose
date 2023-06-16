@@ -1,4 +1,5 @@
 package com.softwaremill.demospringbootdockercompose.domain.articles;
 
-public record Content(String text) {
+public record Content(String text)
+{
 }

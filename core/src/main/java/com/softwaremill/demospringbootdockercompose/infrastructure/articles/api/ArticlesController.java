@@ -10,19 +10,20 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/articles")
-public class ArticlesController {
+public class ArticlesController
+{
 
     private final ArticlesRepository articlesRepository;
 
-    public ArticlesController(ArticlesRepository articlesRepository) {
-        this.articlesRepository = articlesRepository;
+    public ArticlesController(ArticlesRepository articlesRepository)
+    {
+	this.articlesRepository = articlesRepository;
     }
 
     @GetMapping
-    public Articles getAllArticles() {
-        List<Article> articles = articlesRepository.findAll();
-        return new Articles(articles);
+    public Articles getAllArticles()
+    {
+	List<Article> articles = articlesRepository.findAll();
+	return new Articles(articles);
     }
 }
-
-
