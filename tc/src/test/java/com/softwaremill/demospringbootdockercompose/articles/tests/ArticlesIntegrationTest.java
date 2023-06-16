@@ -1,6 +1,6 @@
-package com.softwaremill.demospringbootdockercompose.articles;
+package com.softwaremill.demospringbootdockercompose.articles.tests;
 
-import com.softwaremill.demospringbootdockercompose.BaseIntegrationTest;
+import com.softwaremill.demospringbootdockercompose.tests.BaseIntegrationTest;
 import com.softwaremill.demospringbootdockercompose.domain.articles.Article;
 import com.softwaremill.demospringbootdockercompose.domain.articles.ArticleId;
 import com.softwaremill.demospringbootdockercompose.domain.articles.Author;

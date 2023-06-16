@@ -1,5 +1,6 @@
-package com.softwaremill.demospringbootdockercompose;
+package com.softwaremill.demospringbootdockercompose.tests;
 
+import com.softwaremill.demospringbootdockercompose.Application;
 import com.softwaremill.demospringbootdockercompose.tc.cfgs.TestContainersCFGs;
 import org.springframework.boot.SpringApplication;
 

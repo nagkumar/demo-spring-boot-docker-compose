@@ -1,6 +1,6 @@
-package com.softwaremill.demospringbootdockercompose.users;
+package com.softwaremill.demospringbootdockercompose.users.tests;
 
-import com.softwaremill.demospringbootdockercompose.BaseIntegrationTest;
+import com.softwaremill.demospringbootdockercompose.tests.BaseIntegrationTest;
 import com.softwaremill.demospringbootdockercompose.domain.users.User;
 import com.softwaremill.demospringbootdockercompose.infrastructure.users.api.Users;
 import org.junit.jupiter.api.Test;
