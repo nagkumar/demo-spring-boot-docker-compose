@@ -12,11 +12,10 @@ import java.util.UUID;
 @Configuration
 public class InitialDataForDevelopment
 {
-
     @Bean
     @ConditionalOnProperty(name = "data.initialize", havingValue = "true")
-    public CommandLineRunner commandLineRunner(UsersRepository usersRepository)
+    public CommandLineRunner commandLineRunner(final UsersRepository aUsersRepository)
     {
-	return args -> usersRepository.save(new User(UUID.randomUUID().toString(), "name"));
+	return args -> aUsersRepository.save(new User(UUID.randomUUID().toString(), "name"));
     }
 }
