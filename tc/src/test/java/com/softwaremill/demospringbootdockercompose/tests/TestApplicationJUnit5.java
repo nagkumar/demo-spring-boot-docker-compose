@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Import;
 
 @SpringBootTest
 @Import(TestContainersCFGs.class)
-public final class ApplicationTest
+public final class TestApplicationJUnit5
 {
     @Test
     void contextLoads()
