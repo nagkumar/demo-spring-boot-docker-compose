@@ -9,7 +9,7 @@
     <artifactId>docker-compose</artifactId>
     <dependencies>
         <dependency>
-            <groupId>com.example</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>core</artifactId>
             <version>${project.version}</version>
         </dependency>
