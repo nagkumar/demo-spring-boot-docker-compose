@@ -1,6 +1,6 @@
 package com.softwaremill.demospringbootdockercompose;
 
-import com.softwaremill.demospringbootdockercompose.config.TestContainersConfiguration;
+import com.softwaremill.demospringbootdockercompose.tc.cfgs.TestContainersCFGs;
 import org.springframework.boot.SpringApplication;
 
 public final class TestApplication
@@ -8,7 +8,7 @@ public final class TestApplication
     public static void main(final String[] aArgs)
     {
 	SpringApplication.from(Application::main)
-			 .with(TestContainersConfiguration.class)
+			 .with(TestContainersCFGs.class)
 			 .run(aArgs);
     }
 }

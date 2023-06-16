@@ -1,12 +1,12 @@
 package com.softwaremill.demospringbootdockercompose;
 
-import com.softwaremill.demospringbootdockercompose.config.TestContainersConfiguration;
+import com.softwaremill.demospringbootdockercompose.tc.cfgs.TestContainersCFGs;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 
 @SpringBootTest
-@Import(TestContainersConfiguration.class)
+@Import(TestContainersCFGs.class)
 class ApplicationTest
 {
     @Test

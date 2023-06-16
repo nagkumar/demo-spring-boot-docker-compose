@@ -1,6 +1,6 @@
 package com.softwaremill.demospringbootdockercompose;
 
-import com.softwaremill.demospringbootdockercompose.config.TestContainersConfiguration;
+import com.softwaremill.demospringbootdockercompose.tc.cfgs.TestContainersCFGs;
 import com.softwaremill.demospringbootdockercompose.infrastructure.articles.database.ArticlesRepository;
 import com.softwaremill.demospringbootdockercompose.infrastructure.users.database.UsersRepository;
 import org.junit.jupiter.api.AfterEach;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@Import(TestContainersConfiguration.class)
+@Import(TestContainersCFGs.class)
 @ActiveProfiles("test")
 public class BaseIntegrationTest
 {
